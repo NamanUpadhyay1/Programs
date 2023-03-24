@@ -709,3 +709,480 @@
 // let times = 2
 
 // goPreviousNumber(arr, times, length)
+
+
+// 20th March
+
+// Q. 1. Write javascript program to create hollow diamond pattern
+
+// let n = 5;
+// let string = ""
+
+// for (let i = 1; i <= n; i++) 
+// {
+
+//   for (let j = n; j > i; j--) 
+//   {
+//     string += " ";
+//   }
+//   for (let k = 0; k < i * 2 - 1; k++) 
+//   {
+//     if (k === 0 || k === 2 * i - 2) 
+//     {
+//       string += "*"
+//     }
+//     else 
+//     {
+//       string += " "
+//     }
+//   }
+//   string += "\n"
+// }
+// for (let i = 1; i <= n - 1; i++) 
+// {
+//     for (let j = 0; j < i; j++) 
+//     {
+//       string += " "
+//     }
+//     for (let k = (n - i) * 2 - 1; k >= 1; k--) 
+//     {
+//       if (k === 1 || k === (n - i) * 2 - 1) 
+//       {
+//         string += "*"
+//       }
+//       else 
+//       {
+//         string += " "
+//       }
+//     }
+//     string += "\n"
+//   }
+// console.log(string);
+
+//Q. Implement a function to remove duplicates from an array without using any built-in functions.
+
+
+// function unique(a, fn) 
+// {
+//     if (a.length === 0 || a.length === 1) 
+//     {
+//       return a
+//     }
+
+//     if (!fn) 
+//     {
+//       return a
+//     }
+  
+//     for (let i = 0; i < a.length; i++) 
+//     {
+//       for (let j = i + 1; j < a.length; j++) 
+//       {
+//         if (fn(a[i], a[j])) 
+//         {
+//           a.splice(i, 1);
+//         }
+//       }
+//     }
+//     return a
+//   }
+  
+//   const members = 
+//   [
+//     { id: 1, name: 'John' },
+//     { id: 2, name: 'Jane' },
+//     { id: 1, name: 'John' },
+//     { id: 4, name: 'Joe' },
+//   ];
+  
+//   const uniqueMembers = unique(
+//     members,
+//     (a, b) => (a.id === b.id) & (a.name === b.name)
+//   );
+  
+//   console.log(uniqueMembers)
+
+// function unique(a, fn) 
+// {
+//     if (a.length === 0 || a.length === 1) 
+//     {
+//       return a
+//     }
+
+//     if (!fn) 
+//     {
+//       return a
+//     }
+  
+//     for (let i = 0; i < a.length; i++) 
+//     {
+//       for (let j = i + 1; j < a.length; j++) 
+//       {
+//         if (fn(a[i], a[j])) 
+//         {
+//           a.splice(i, 1);
+//         }
+//       }
+//     }
+//     return a
+//   }
+  
+//   const members = 
+//   [1, 2, 1, 3, 4, 1, 5];
+  
+//   const uniqueMembers = unique(
+//     members,
+//     (a, b) => (a === b)
+//   );
+  
+//   console.log(uniqueMembers)
+  
+
+//Q. Implement a function to reverse a linked list
+
+
+
+
+
+// Q. Flatten an array of nest array
+
+//in-built Method
+
+// const arr4 = [1, 2, [3, 4, [5, 6, [7, 8, [9, 10]]]]];
+// console.log(arr4.flat(Infinity))
+
+//without in-built method
+
+// function flatten(arr) 
+// {
+//     const newArr = arr.reduce((acc, item) => 
+//     {
+//       if (Array.isArray(item)) 
+//       {
+//         acc = acc.concat(flatten(item))
+//       } 
+//       else 
+//       {
+//        acc.push(item)
+//       }
+  
+//       return acc
+
+//     }, [])
+  
+//     return newArr
+    
+// }
+  
+// console.log(flatten([1, [2, [3], 4, [5, 6, [7]]]]))
+
+
+// Q. Find the first non repeating character
+
+// function firstNonRepeatingCharacter(str) 
+// {
+//     for (let i = 0; i < str.length; i++) 
+//     {
+//       let char = str[i]
+
+//       if (str.indexOf(char) == i && str.indexOf(char, i + 1) == -1) 
+//       {
+//         return char
+//       }
+//     }
+    
+//   }
+//   console.log(firstNonRepeatingCharacter('aaabbbcdddeee'))
+
+
+
+// 21st March 
+
+// Q. Bubble sort an array
+
+// function bblSort(arr)
+// {
+//   for(var i = 0; i < arr.length; i++)
+//   {
+//     for(var j = 0; j < ( arr.length - i -1 ); j++)
+//     {     
+//       if(arr[j] > arr[j+1])
+//       {
+//         var temp = arr[j]
+//         arr[j] = arr[j + 1]
+//         arr[j+1] = temp
+//       }
+//     }
+//   }
+//   console.log(arr)
+// }
+// bblSort([8, 7, 1, 5, -2])
+
+
+// Q. Infinity Loop
+
+// while (true)
+// {
+//   for(var i = 0; i<Infinity; i++)
+//   {
+//     console.log(i);
+//   }
+// }
+
+
+// Q. Down triangle star pattern
+
+
+// let n = 5;
+
+// for (let i = 0; i < n; i++) 
+// {
+//   for (let k = 0; k < n - i; k++) 
+//   {
+//     process.stdout.write('*');
+//   }
+//   console.log("");
+// }
+
+
+// Q. Remove character at a specific position
+
+
+// function removeChar(str, position)
+// {
+//   part1 = str.substring(0, position)
+//   part2 = str.substring(position + 1, str.length)
+//   return (part1 + part2)
+// }
+
+// console.log(removeChar("hello", 3));
+
+
+// Q. Function overloading example
+
+
+// function overloading(arg1) 
+// {
+//   console.log(arg1)
+// }
+
+// function overloading(arg1, arg2) 
+// {
+//   console.log(arg1, arg2)
+// }
+
+// overloading("hi")
+
+
+// 22nd March
+
+// Q. Write a program to replace item of array with specific value.
+
+// const arr = ['a', 'b', 'c'];
+// for (let index = 0; index < arr.length; index++) 
+// {
+//   if (arr[index] === 'a') 
+//   {
+//     arr[index] = 'z'
+//     break;
+//   }
+// }
+// console.log(arr);
+
+// Q. Write a program to find specific value in array.
+
+// let arr = ['a', 'b', 'c']
+// let element = arr[1]
+// console.log(element)
+
+// Q. Write a program to reverse a string
+
+// function reverseString(str)
+// {
+//   var split = str.split("")
+//   var reverse = split.reverse()
+//   var join = reverse.join("")
+//   return join
+// }
+// console.log(reverseString('hello'))
+
+// Q. Write a program to multiple each value of array with a specific number
+
+// function array(arr, num)
+// {
+// for(var i = 0; i<arr.length; i++)
+// {
+//   arr[i] *= num
+// }
+// return arr
+// }
+// console.log(array([1, 2, 3, 4, 5], 5))
+
+
+// 23rd March
+
+// Q. Write a program that takes a string as input and capitalizes the first letter of each sentence.
+
+// function string(str)
+// {
+//     let words = str.split(" ")
+//     for(i=0; i<words.length; i++)
+//     {
+//         words[i] = words[i][0].toUpperCase() + words[i].substr(1)
+//     }
+//     words.join()
+//     return words
+// }
+
+// console.log(string('hello hi'))
+
+// Q. Write a Javascript function that generates a new random PAN(Permanent Account Number).
+
+// function panCard(length)
+// {
+// const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+// let result = ""
+// let singleChar = ""
+
+// const charLength = characters.length
+
+// let counter = 0;
+//     while (counter < length) 
+//     {
+//       result += characters.charAt(Math.floor(Math.random() * charLength));
+//       counter += 1;
+//     }
+    
+
+// let digit = Math.floor(Math.random()* (1111 - 4999 + 1)+ 4999) 
+
+// singleChar += characters[Math.floor(Math.random() * charLength)]
+ 
+// return result+digit+singleChar
+
+// }
+
+// console.log(panCard(5));
+
+
+// Q. Write a function that takes an array of numbers as input and returns the maximum subarray sum.
+
+// const maxSubArray = (nums) => 
+// {
+//     let maxSum = -Infinity
+//     let currentSum = 0
+//     for(let i = 0; i < nums.length; i++){ 
+        
+//         currentSum = Math.max(nums[i], currentSum + nums[i])
+        
+//         maxSum = Math.max(currentSum, maxSum)
+        
+//     }
+//     return maxSum
+// }
+// console.log( maxSubArray([1,2,3,-5,4,6]))
+
+
+// Q. Implement a function that takes a string as an argument and returns the most frequent character in the string.
+
+// var getMax = function (str) 
+// {
+//     var max = 0,
+//     maxChar = ''
+//     str.split('').forEach(function(char)
+//         {
+//             if(str.split(char).length > max) 
+//             {
+//                max = str.split(char).length;
+//                maxChar = char;
+//             }
+//         })
+//         return maxChar
+// }
+    
+// console.log('The most repeated letter is : ')
+// console.log(getMax(`hello`))
+
+
+// Q. Write a program to count the occurrence of characters in the string
+
+// function countAlphabets(str)
+// {
+    
+//     for(i=0; i<str.length; i++)
+//     {
+//         let counting = 0
+//         for(j=0; j<str.length; j++)
+//         {
+//             if(str[i]==str[j]&& i>j)
+//             {
+//                 break;
+//             }
+//             if(str[i]==str[j])
+//             {
+//                 counting++
+//             }
+//         }
+//         if(counting>0)
+//         {
+//             console.log(`${str[i]} = ${counting} times`);
+//         }
+//     }
+// }
+// countAlphabets('hello')
+
+
+// var arr = new Array(2);
+
+// for (var i = 0; i < arr.length; i++)
+// {
+//     arr[i] = []
+// }
+// var h = 0;
+// var s = "HiHi"
+
+// for (var i = 0; i < 2; i++) 
+// {
+//     for (var j = 0; j < 2; j++) 
+//     {
+//         arr[i][j] = s[h++]
+//     }
+// }
+
+// for (var i = 0; i < 2; i++) 
+// {
+//     for (var j = 0; j < 2; j++)
+//     {
+//         process.stdout.write(arr[i][j] + " ")
+//     }
+//     process.stdout.write("\n")
+// }
+
+
+// function numbers(num)
+// {
+//     const even = []
+
+//     for(i=0; i<num.length; i++)
+//     {
+//         const numb = num[i]
+//         if(numb%2 == 0)
+//         {
+//             even.push(numb*numb)
+//         }
+//     }
+//     return even
+// }
+// console.log(numbers([1,2,3,4,5,6]));
+
+// function multiply(array)
+// {
+//     var sum = 1
+//     for(var i = 0; i<array.length; i++)
+//     {
+//         sum = sum * array[i]
+//     }
+//     return sum
+// }
+// console.log(multiply([1, 2, 3]))
