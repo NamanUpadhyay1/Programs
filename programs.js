@@ -1186,3 +1186,74 @@
 //     return sum
 // }
 // console.log(multiply([1, 2, 3]))
+
+
+//25th March ~
+
+//Q. Fibonacci series using recursion
+
+// var fibonacci_series = function (n) 
+// {
+//   if (n===1) 
+//   {
+//     return [0, 1]
+//   } 
+//   else
+//   {
+//     var s = fibonacci_series(n - 1)
+//     s.push(s[s.length - 1] + s[s.length - 2])
+//     return s
+//   }
+// }
+
+//  console.log(fibonacci_series(8));
+
+//Q. Program defining the difference between == and ===
+
+// let a = 10
+// let b = 10
+
+// let c = 5
+// let d = 5.0
+
+// console.log(c==d)
+// console.log(c===d)
+
+
+//Q. Write a program to remove duplicates from a given array
+
+// function uniqueChar(str1)
+// {
+//     let str = str1
+//     let unique = ""
+//     for(var i = 0; i<str.length; i++)
+//     {
+//         if(unique.indexOf(str.charAt(i))==-1)
+//         {
+//             unique += str[i]
+//         }
+//     }
+//     return unique
+// }
+
+// console.log(uniqueChar('thequickbrownfox'));
+
+
+// Q. Write a program to perform merge sort
+
+// function merge(left, right) 
+// {
+//   let sortedArr = []
+//   while (left.length && right.length) 
+//   {
+//     if (left[0] < right[0]) 
+//     {
+//       sortedArr.push(left.shift())
+//     } else 
+//     {
+//       sortedArr.push(right.shift())
+//     }
+//   }
+//   return [...sortedArr, ...left, ...right]
+// }
+// console.log(merge([1, 4], [2, 6, 9]))
