@@ -877,7 +877,7 @@
 // console.log(flatten([1, [2, [3], 4, [5, 6, [7]]]]))
 
 
-// Q. Find the first non repeating character
+//Q. Find the first non repeating character
 
 // function firstNonRepeatingCharacter(str) 
 // {
@@ -1036,7 +1036,7 @@
 
 // console.log(string('hello hi'))
 
-// Q. Write a Javascript function that generates a new random PAN(Permanent Account Number).
+//Q. Write a Javascript function that generates a new random PAN(Permanent Account Number).
 
 // function panCard(length)
 // {
@@ -1160,21 +1160,21 @@
 // }
 
 
-// function numbers(num)
-// {
-//     const even = []
+function numbers(num)
+{
+    const even = []
 
-//     for(i=0; i<num.length; i++)
-//     {
-//         const numb = num[i]
-//         if(numb%2 == 0)
-//         {
-//             even.push(numb*numb)
-//         }
-//     }
-//     return even
-// }
-// console.log(numbers([1,2,3,4,5,6]));
+    for(i=0; i<num.length; i++)
+    {
+        const numb = num[i]
+        if(numb%2 == 0)
+        {
+            even.push(numb*numb)
+        }
+    }
+    return even
+}
+console.log(numbers([1,2,3,4,5,6]));
 
 // function multiply(array)
 // {
@@ -1257,3 +1257,175 @@
 //   return [...sortedArr, ...left, ...right]
 // }
 // console.log(merge([1, 4], [2, 6, 9]))
+
+
+// 27th March ~
+
+// Q. Write a function to implement a binary search algorithm on a sorted array.
+
+// Q. Write a program to get the factorial of n number
+
+// function factorial(num)
+// {
+    
+// if (num < 0) 
+// {
+//     console.log('Error! Factorial for negative number does not exist.');
+// }
+
+// else if (num === 0) 
+// {
+//     console.log(`The factorial of ${num} is 1.`);
+// }
+
+// else 
+// {
+//     let fact = 1;
+//     for (i = 1; i <= num; i++) 
+//     {
+//         fact *= i;
+//     }
+//     console.log(`The factorial of ${num} is ${fact}.`);
+// }
+// }
+// factorial(9)
+
+// Q. Write a program to find the second largest number in the array.
+
+// function findSecondLargestElem(arr)
+// {
+//     let first = -1 , second = -1
+
+//     for(let i = 0; i <= arr.length-1; i++)
+//     {
+//         if(arr[i] > first)
+//         {
+//             second = first;
+//             first = arr[i];
+//         }
+//         else if( arr[i] > second && arr[i] != first)
+//         {
+//             second = arr[i]
+//         }
+//     }
+//     console.log(second)
+// }
+
+// findSecondLargestElem([1, 2, 3, 4, 5])
+
+
+// Q . Implement a function to find all pairs of elements in an array whose sum equals a given value.
+
+// let twoSum = (array, sum) => 
+// {
+//     let hashMap = {},
+//       results = []
+
+//         for (let i = 0; i < array.length; i++)
+//         {
+//             if (hashMap[array[i]]){
+//                 results.push([hashMap[array[i]], array[i]])
+//             }
+//             else
+//             {
+//                 hashMap[sum - array[i]] = array[i]
+//             }
+//           }
+//           return results
+//     }
+// console.log(twoSum([10,20,10,40,50,60,70,30],50))
+
+// for(;;)
+// {
+//     console.log('hi');
+// }
+
+// function countString(str, letter)
+// {
+//     let count = 0
+//     for(let i = 0; i<str.length; i++)
+//     {
+//         if(str.charAt(i).toLowerCase()==letter.toLowerCase())
+//         {
+//             count += 1;
+//         }
+//     }
+//     return count;
+// }
+
+// const letterToCheck = 'hello'
+// const result = countString(letterToCheck, 'l');
+
+// console.log(result);
+
+// function countVowels(str)
+// {
+//     const vowels = ['a', 'e', 'i', 'o', 'u']
+//     let count = 0
+
+//     for(let i = 0; i<str.length; i++)
+//     {
+//         if(vowels.includes(str[i].toLowerCase()))
+//         {
+//             count++
+//         }
+//     }
+//     return count;
+// }
+
+// const vowerlCount = countVowels('aeiozu')
+// console.log(`Vowel count: ${vowerlCount}`);
+
+// function findMaxElement(arr)
+// {
+//     let max = arr[0]
+
+//     for(let i = 1; i<arr.length; i++)
+//     {
+//         if(arr[i]>max)
+//         {
+//             max = arr[i]
+//         }
+//     }
+//     return max
+// }
+
+// const numbers = [5, 10, 2, 8, 3]
+// const maxElement = findMaxElement(numbers)
+// console.log(`Maximum element: ${maxElement}`);
+
+// function calculateSum(arr)
+// {
+//     let sum = 0
+
+//     for(let i = 0; i<arr.length; i++)
+//     {
+//         sum += arr[i]
+//     }
+//     return sum
+// }
+
+// const numbers = [5, 10, 2, 8, 3]
+// console.log(`sum of elements: ${calculateSum(numbers)}`);
+
+// function bubbleSort(arr) {
+//     const length = arr.length;
+  
+//     for (let i = 0; i < length - 1; i++) 
+//     {
+//       for (let j = 0; j < length - 1 - i; j++) 
+//       {
+
+//         if (arr[j] > arr[j + 1]) 
+//         {
+//           const temp = arr[j];
+//           arr[j] = arr[j + 1];
+//           arr[j + 1] = temp;
+//         }
+//       }
+//     }
+  
+//     return arr;
+//   }
+  
+//   console.log(`Sorted numbers: ${bubbleSort([5, 3, 8, 2, 1, 4])}`);
